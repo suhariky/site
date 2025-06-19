@@ -152,4 +152,20 @@ footer.footer {
         min-width: 120px;
         min-height: 80px;
     }
+}
+#streetview-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    background: #232837;
+    z-index: 2;
+    pointer-events: none;
+    transition: opacity 0.5s;
+    opacity: 1;
+}
+#streetview-overlay.hide {
+    opacity: 0;
+    pointer-events: none;
 } 

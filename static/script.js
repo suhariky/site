@@ -24,6 +24,9 @@ document.getElementById('guess-btn').addEventListener('click', function() {
         document.getElementById('result').textContent = 'Сначала выберите точку на карте!';
         return;
     }
+    // Скрываем overlay с названием места
+    var overlay = document.getElementById('streetview-overlay');
+    if (overlay) overlay.classList.add('hide');
     // Вычисляем расстояние между точками (гаверсинус)
     const R = 6371; // радиус Земли в км
     const dLat = (guess.lat - answer.lat) * Math.PI / 180;
