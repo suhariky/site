@@ -8,19 +8,26 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
 <body>
-    <h1>Мини-GeoGuessr</h1>
-    <div id="game-container">
-        <div id="streetview-container">
-            <iframe id="streetview" width="400" height="300" frameborder="0" allowfullscreen
-                src="https://www.google.com/maps/embed?pb=!4v1718800000000!6m8!1m7!1sCAoSLEFGMVFpcE1wQ2Z3b2Z6b2Z6b2Z6b2Z6b2Z6b2Z6b2Z6b2Z6b2Z6b2Z6!2m2!1d48.8588443!2d2.2943506!3f0!4f0!5f0.7820865974627469">
-            </iframe>
+    <nav class="navbar">
+        <div class="navbar-title">Мини-GeoGuessr</div>
+    </nav>
+    <main class="main-content">
+        <div class="game-card">
+            <div id="game-container">
+                <div id="streetview-container">
+                    <iframe id="streetview" width="400" height="300" frameborder="0" allowfullscreen
+                        src="https://www.google.com/maps/embed?pb=!4v1718800000000!6m8!1m7!1sCAoSLEFGMVFpcE1wQ2Z3b2Z6b2Z6b2Z6b2Z6b2Z6b2Z6b2Z6b2Z6b2Z6b2Z6!2m2!1d48.8588443!2d2.2943506!3f0!4f0!5f0.7820865974627469">
+                    </iframe>
+                </div>
+                <div id="map-container">
+                    <div id="leaflet-map"></div>
+                </div>
+            </div>
+            <button id="guess-btn">Угадать!</button>
+            <div id="result"></div>
         </div>
-        <div id="map-container">
-            <div id="leaflet-map"></div>
-        </div>
-    </div>
-    <button id="guess-btn">Угадать!</button>
-    <div id="result"></div>
+    </main>
+    <footer class="footer"></footer>
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script src="static/script.js"></script>
 </body>

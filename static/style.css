@@ -1,3 +1,54 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #181c24;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    color: #f3f6fa;
+}
+
+.navbar {
+    width: 100%;
+    background: #232837;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    padding: 18px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #6ea8fe;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 80vh;
+    padding: 40px 10px 20px 10px;
+}
+
+.game-card {
+    background: #232837;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+    padding: 32px 24px 24px 24px;
+    max-width: 1350px;
+    width: 98vw;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
 #game-container {
     display: flex;
     justify-content: center;
@@ -5,9 +56,9 @@
     margin: 30px 0;
 }
 #streetview-container, #map-container {
-    background: #fff;
+    background: #232837;
     border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.18);
     padding: 10px;
 }
 #map-container {
@@ -28,23 +79,77 @@
     margin-top: 20px;
     font-size: 18px;
     font-weight: bold;
+    color: #6ea8fe;
 }
 #guess-btn {
     margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
-    background: #007bff;
-    color: #fff;
+    padding: 12px 32px;
+    font-size: 18px;
+    background: #6ea8fe;
+    color: #181c24;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
+    font-weight: 600;
+    transition: background 0.2s, color 0.2s;
+    box-shadow: 0 2px 8px rgba(42,91,215,0.07);
 }
 #guess-btn:hover {
-    background: #0056b3;
+    background: #3b6cb7;
+    color: #fff;
 }
-#leaflet-map {
-    width: 400px;
-    height: 300px;
+#leaflet-map, #streetview {
+    width: 600px !important;
+    height: 400px !important;
+    max-width: 98vw;
+    max-height: 60vw;
+    min-width: 220px;
+    min-height: 150px;
     border-radius: 10px;
-    z-index: 1;
+}
+footer.footer {
+    width: 100%;
+    height: 60px;
+    background: #232837;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.18);
+    margin-top: 40px;
+}
+@media (max-width: 1300px) {
+    .game-card {
+        max-width: 98vw;
+        padding: 24px 12px 18px 12px;
+    }
+    #leaflet-map, #streetview {
+        width: 48vw !important;
+        height: 32vw !important;
+        max-width: 600px;
+        max-height: 400px;
+    }
+}
+@media (max-width: 950px) {
+    #game-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .game-card {
+        padding: 12px 6px 12px 6px;
+    }
+    #leaflet-map, #streetview {
+        width: 95vw !important;
+        height: 50vw !important;
+        max-width: 600px;
+        max-height: 400px;
+    }
+}
+@media (max-width: 600px) {
+    .game-card {
+        padding: 4px 2vw 4px 2vw;
+    }
+    #leaflet-map, #streetview {
+        width: 98vw !important;
+        height: 48vw !important;
+        min-width: 120px;
+        min-height: 80px;
+    }
 } 
