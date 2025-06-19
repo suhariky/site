@@ -3,13 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мой сайт на HTML, CSS, JS</title>
+    <title>Мини-GeoGuessr</title>
     <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
 <body>
-    <h1>Добро пожаловать на сайт на HTML, CSS и JavaScript!</h1>
-    <p>Это пример сайта без Python backend.</p>
-    <button id="hello-btn">Нажми меня</button>
+    <h1>Мини-GeoGuessr</h1>
+    <div id="game-container">
+        <div id="streetview-container">
+            <iframe id="streetview" width="400" height="300" frameborder="0" allowfullscreen
+                src="https://www.google.com/maps/embed?pb=!4v1718800000000!6m8!1m7!1sCAoSLEFGMVFpcE1wQ2Z3b2Z6b2Z6b2Z6b2Z6b2Z6b2Z6b2Z6b2Z6b2Z6b2Z6!2m2!1d48.8588443!2d2.2943506!3f0!4f0!5f0.7820865974627469">
+            </iframe>
+        </div>
+        <div id="map-container">
+            <div id="leaflet-map"></div>
+        </div>
+    </div>
+    <button id="guess-btn">Угадать!</button>
+    <div id="result"></div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script src="static/script.js"></script>
 </body>
 </html> 
